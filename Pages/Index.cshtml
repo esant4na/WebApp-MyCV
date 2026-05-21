@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Mi Curriculum";
+    ViewData["Title"] = "Edwin-Portfolio";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@
                     </div>
                     <p class="lead mb-5">Profesional en desarrollo de software con experiencia en el análisis, diseño, desarrollo, implementación y mantenimiento de aplicaciones. Enfoque en la seguridad de los datos, integridad de la información y experiencia del usuario. Habilidad para trabajar en equipo, alta responsabilidad y compromiso con el crecimiento de la empresa.</p>
                     <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/edwin-lima-aguirre-6143b8265/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/edwin-lima/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://www.youtube.com/@@edwinlimaaguirre1246" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a class="social-icon" href="https://www.github.com/esant4na" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
@@ -192,21 +192,36 @@
             <section class="resume-section" id="contact">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Contacto</h2>
-                    <form id="contactForm" action="https://formspree.io/f/xrbedjoe"  method="POST" autocomplete="off">
+
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["Success"]
+                    </div>
+                }
+
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger">
+                        @TempData["Error"]
+                    </div>
+                }
+
+                <form asp-controller="Contact" asp-action="Send" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre" required>
+                            <input type="text" class="form-control" id="name" name="Name" placeholder="Tu Nombre" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Tu Correo Electrónico" required>
+                            <input type="email" class="form-control" id="email" name="Email" placeholder="Tu Correo Electrónico" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tu Mensaje" required></textarea>
+                            <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Tu Mensaje" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
+                </form>
                 </div>
             </section>
         </div>
