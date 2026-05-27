@@ -57,33 +57,21 @@ dotnet run
 
 ---
 
-## 📂 Estructura del proyecto
-
-```text
-WebApp-MyCV/
-│
-├── wwwroot/        # Archivos estáticos (CSS, JS, imágenes)
-├── Pages/          # Vistas Razor Pages
-├── Program.cs      # Configuración principal ASP.NET Core
-├── appsettings.json
-└── WebApp-MyCV.csproj
-```
-
----
-
 ## 🎯 Objetivo del proyecto
 
-Este proyecto fue desarrollado con el objetivo de contar con un currículum web profesional y reforzar conocimientos en desarrollo web utilizando ASP.NET Core y tecnologías frontend.
+Este proyecto comenzó como un currículum web personal desarrollado con ASP.NET Core MVC y actualmente evoluciona hacia un portfolio profesional orientado a mostrar proyectos, habilidades técnicas y experiencia en desarrollo de software.
+
+Además, el proyecto sirve como práctica para reforzar conocimientos en desarrollo web moderno, arquitectura MVC, integración de servicios SMTP con MailKit y despliegue de aplicaciones en la nube.
 
 ---
 
 ## 📈 Mejoras futuras
 
-- Integración con base de datos
 - Formulario de contacto dinámico
 - Deploy permanente en la nube
 - Mejora visual y animaciones
-- Integración con APIs
+- Integración de nuevas tecnologías frontend
+- Sección de proyectos interactiva
 
 ---
 
