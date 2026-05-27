@@ -28,11 +28,12 @@ namespace WebApp_MyCV.Controllers
 
                 TempData["Success"] = "Mensaje enviado correctamente.";
             }
-            catch
-            {
+            catch (Exception ex) {
+            
                 TempData["Error"] = "Error al enviar el mensaje.";
+                Console.WriteLine("EMAIL ERROR: " + ex.Message);
             }
-
+            TempData["Success"] = "Enviando mensaje...";
             return Redirect("/#contact");
         }
     }
