@@ -13,4 +13,4 @@ COPY --from=build /app/publish .
 
 EXPOSE 8080
 
-ENTRYPOINT ["dotnet", "WebApp_MyCV.dll"]
+ENTRYPOINT ["dotnet", "WebApp-MyCV.dll"]
