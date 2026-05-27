@@ -42,12 +42,15 @@ namespace WebApp_MyCV.Services
                 "
             };
 
-            using var smtp = new SmtpClient();
+            using var smtp = new SmtpClient
+            {
+                Timeout = 20000
+            };
 
             await smtp.ConnectAsync(
                 _configuration["EmailSettings:SmtpServer"],
                 int.Parse(_configuration["EmailSettings:Port"]),
-                MailKit.Security.SecureSocketOptions.StartTls);
+                MailKit.Security.SecureSocketOptions.SslOnConnect);
 
             await smtp.AuthenticateAsync(
                 _configuration["EmailSettings:Username"],
