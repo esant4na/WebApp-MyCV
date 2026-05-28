@@ -209,25 +209,27 @@
                     </div>
                 }
 
-                <form asp-controller="Contact" asp-action="Send" method="POST">
+                <!--<form asp-controller="Contact" asp-action="Send" method="POST"> MailKit -->
+                <form id="contact-form" action="https://formspree.io/f/xrbedjoe" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="Name" placeholder="Tu Nombre" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="Email" placeholder="Tu Correo Electrónico" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Tu Correo Electrónico" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Tu Mensaje" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tu Mensaje" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
                 </div>
             </section>
         </div>
+
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="/js/scripts.js"></script>
     </body>
 </html>

@@ -32,3 +32,27 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', async function (e) {
+
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+
+        alert('Mensaje enviado correctamente');
+
+        form.reset();
+    }
+});

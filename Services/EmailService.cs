@@ -50,7 +50,7 @@ namespace WebApp_MyCV.Services
             await smtp.ConnectAsync(
                 _configuration["EmailSettings:SmtpServer"],
                 int.Parse(_configuration["EmailSettings:Port"]),
-                MailKit.Security.SecureSocketOptions.SslOnConnect);
+                MailKit.Security.SecureSocketOptions.StartTls);
 
             await smtp.AuthenticateAsync(
                 _configuration["EmailSettings:Username"],
